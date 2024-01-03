@@ -1,0 +1,10 @@
+package DAY06;
+
+public class InstallApp {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

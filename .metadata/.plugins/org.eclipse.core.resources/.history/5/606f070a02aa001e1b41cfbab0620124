@@ -1,0 +1,25 @@
+package DAY06;
+
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+public class InstallApp {
+
+	public static void main(String[] args) throws MalformedURLException {
+		// TODO Auto-generated method stub
+		
+		//Gather desired capabilitiess
+		 DesiredCapabilities capabilities = new DesiredCapabilities();
+	        capabilities.setCapability("deviceName","AndroidEmulator");
+	        capabilities.setCapability("platformname", "Android");     
+	        capabilities.setCapability("automationName","uiautomator2");
+	        capabilities.setCapability("app", "C:\\Users\\ASUS\\Desktop\\Appium\\apkfiles\\AppiumTutorial.apk");
+	
+	
+	        URL url = new URL ("http://127.0.0.1:4723/");
+	        
+	}
+
+}
