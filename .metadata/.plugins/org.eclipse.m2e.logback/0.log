@@ -141,3 +141,47 @@
 2024-01-03 14:41:36,032 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
 2024-01-03 14:42:54,235 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
 2024-01-03 14:42:54,237 [Worker-34: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-03 18:16:20,158 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-03 18:16:20,174 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-03 18:16:29,047 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-03 18:16:29,052 [Worker-41: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-03 18:16:41,548 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-03 18:16:41,552 [Worker-49: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-03 18:18:23,576 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-03 18:18:23,579 [Worker-51: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-03 20:09:50,357 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-03 20:09:50,371 [Worker-53: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 10:34:58,051 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2024-01-04 10:43:31,760 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-api/maven-metadata.xml
+2024-01-04 10:43:31,785 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-api/maven-metadata.xml
+2024-01-04 10:43:31,822 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/maven-metadata.xml
+2024-01-04 10:43:31,840 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/maven-metadata.xml
+2024-01-04 10:43:32,142 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloading https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-support/maven-metadata.xml
+2024-01-04 10:43:32,167 [Worker-21: Building] INFO  o.e.m.c.i.e.AbstractTransferListenerAdapter - Downloaded https://repo.maven.apache.org/maven2/org/seleniumhq/selenium/selenium-support/maven-metadata.xml
+2024-01-04 10:43:32,623 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 10:43:32,628 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 10:49:24,846 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 10:49:24,848 [Worker-21: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 10:52:58,293 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 10:52:58,295 [Worker-8: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 10:54:44,749 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 10:54:44,752 [Worker-20: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 10:56:04,903 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 10:56:04,906 [Worker-24: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 11:01:18,146 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 11:01:18,148 [Worker-27: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 11:01:39,498 [Worker-25: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 11:01:39,500 [Worker-25: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 11:03:00,142 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 11:03:00,144 [Worker-26: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 12:18:03,427 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2024-01-04 12:18:57,514 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 12:18:57,520 [Worker-15: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 12:50:12,177 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 12:50:12,179 [Worker-3: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 12:52:09,019 [Worker-16: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 12:52:09,022 [Worker-16: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 12:56:17,133 [Worker-1: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 12:56:17,135 [Worker-1: Launching AutomateCalc] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources
+2024-01-04 12:56:43,893 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\main\resources
+2024-01-04 12:56:43,896 [Worker-16: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\ASUS\Desktop\Appium\AppiumDemo\src\test\resources

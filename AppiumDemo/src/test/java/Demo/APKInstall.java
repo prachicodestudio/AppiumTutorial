@@ -31,7 +31,7 @@ public class APKInstall {
 	       
 	        Thread.sleep(5000);
 	        System.out.println("Application Started");
-	        driver.quit();
+	        driver.quit();//CLOSE SESSION
 	        
 		
 	}
