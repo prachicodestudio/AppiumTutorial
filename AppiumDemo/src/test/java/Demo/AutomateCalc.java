@@ -8,7 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
-import io.appium.java_client.AppiumBy.ById;
 import io.appium.java_client.android.AndroidDriver;
 
 public class AutomateCalc {
