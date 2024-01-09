@@ -1,0 +1,44 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class CheckboxAndRadioBtn {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+//com.github.axet.android.apis/com.github.axet.android.apis.ApiDemos
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		
+		   capabilities.setCapability("deviceName","OnePlus AC2001");
+	        capabilities.setCapability("platformname", "Android");     
+	        capabilities.setCapability("automationName","uiautomator2");
+	        capabilities.setCapability("app", "C:\\Users\\ASUS\\Desktop\\apkfiles\\ApiDemos17Apkpure.apk");
+	        capabilities.setCapability("platformversion", "12");
+	        
+
+	        capabilities.setCapability("appPackage","com.github.axet.android.apis");
+	        capabilities.setCapability("appActivity", "com.github.axet.android.apis.ApiDemos");
+	     
+
+	        URL url = URI.create("http://127.0.0.1:4723/").toURL();
+	        
+	        AndroidDriver driver = new AndroidDriver(url, capabilities);
+	       
+	        //click on continue button
+	        //click dial pad
+		       driver.findElement(By.id("com.android.permissioncontroller:id/continue_button")).click();
+		    
+	        //com.android.permissioncontroller:id/continue_button
+	        Thread.sleep(5000);
+	        System.out.println("Application Started");
+	        driver.quit();//CLOSE SESSION
+	}
+
+}
