@@ -1,0 +1,91 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+
+public class Switch {
+
+	public static void main(String[] args) throws InterruptedException, MalformedURLException {
+		// TODO Auto-generated method stub
+		//Gather Desired capabilities
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+
+		capabilities.setCapability("deviceName","OnePlus AC2001");
+		capabilities.setCapability("platformname", "Android");     
+		capabilities.setCapability("automationName","uiautomator2");
+		capabilities.setCapability("platformversion", "12");
+
+		capabilities.setCapability("appPackage","io.appium.android.apis");
+		capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		//io.appium.android.apis/io.appium.android.apis.ApiDemos
+
+
+		URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+		Thread.sleep(5000);
+		System.out.println("Application Started");
+
+
+		//click on view button
+		driver.findElements(By.id("android:id/text1")).get(11).click();
+
+		//click on switch button
+		Thread.sleep(2000);
+		String MobElementToScroll = "Switches";
+		WebElement element = driver.findElement(AppiumBy.androidUIAutomator(
+				"new UiScrollable(new UiSelector().scrollable(true))" +
+						".scrollIntoView(new UiSelector().text(\"" + MobElementToScroll + "\"))"));
+		element.click() ;    
+
+
+
+		Thread.sleep(5000);
+
+
+		//Get status of switch using it's text.
+		//   String switchStatus2 = driver.findElement(By.id("io.appium.android.apis:id/monitored_switch")).getText();
+		//   System.out.println(switchStatus2);
+
+		WebElement switchElement = driver.findElement(By.id("io.appium.android.apis:id/monitored_switch"));
+
+		if(switchElement.isSelected()==true)
+		{
+			System.out.println("Doing Monitored switch OFF");
+			switchElement.click();
+		}
+		else
+		{
+			System.out.println("Doing Monitored switch ON");
+			switchElement.click();
+		}
+		//If switchStatus1 = Monitored switch ON, Execute inner code.
+		/*
+		 * if((switchStatus2.trim()).equals("Monitored switch ON"))
+		 * 
+		 * { System.out.println("Doing Monitored switch OFF");
+		 * 
+		 * 
+		 * //Locate switch button element by name = Monitored switch ON.
+		 * //io.appium.android.apis:id/monitored_switch
+		 * 
+		 * WebElement swt = (WebElement)
+		 * driver.findElement(By.name("Monitored switch ON"));
+		 * 
+		 * //Tap on switch button "Monitored switch OFF" to make it OFF. swt.click();
+		 * //swt.tap(1, 1); System.out.println("Monitored switch is OFF now.");
+		 * 
+		 * driver.quit();//CLOSE SESSION }
+		 */
+		driver.quit();//CLOSE SESSION 
+	}
+}

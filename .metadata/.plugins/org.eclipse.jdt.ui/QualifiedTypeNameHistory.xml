@@ -6,6 +6,7 @@
     <fullyQualifiedTypeName name="io.appium.java_client.android.AndroidDriver"/>
     <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy.ById"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy"/>
 </qualifiedTypeNameHistroy>
