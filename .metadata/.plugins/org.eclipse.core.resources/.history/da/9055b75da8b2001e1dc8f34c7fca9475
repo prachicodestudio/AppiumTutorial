@@ -1,0 +1,178 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+import java.time.Duration;
+import java.util.Collections;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Point;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.Pause;
+import org.openqa.selenium.interactions.PointerInput;
+import org.openqa.selenium.interactions.Sequence;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumBy;
+import  io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+import static io.appium.java_client.touch.offset.ElementOption.element;
+import static io.appium.java_client.touch.LongPressOptions.longPressOptions;
+
+public class dragdrop {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+		//Gather Desired capabilities
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+
+		capabilities.setCapability("deviceName","OnePlus AC2001");
+		capabilities.setCapability("platformname", "Android");     
+		capabilities.setCapability("automationName","uiautomator2");
+		capabilities.setCapability("platformversion", "12");
+		capabilities.setCapability("app", "C:\\Users\\ASUS\\Desktop\\apkfiles\\ApiDemos-debug.apk");
+
+
+		capabilities.setCapability("appPackage","io.appium.android.apis");
+		capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+
+
+
+		//com.mobeta.android.demodslv/com.mobeta.android.demodslv.Launcher
+		//capabilities.setCapability("appPackage","com.mobeta.android.demodslv");
+		//capabilities.setCapability("appActivity", "com.mobeta.android.demodslv.Launcher");
+		//io.appium.android.apis/io.appium.android.apis.ApiDemos
+
+
+		URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+
+		Thread.sleep(5000);
+		System.out.println("Application Started");
+
+
+		//click on view button
+		driver.findElements(By.id("android:id/text1")).get(11).click();
+
+		//click on drag and drop button
+		//	WebElement element = driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Drag and Drop\"]"));
+
+		driver.findElements(By.id("android:id/text1")).get(07).click();
+
+		//longpress on source object / move to the destinatination and release
+
+		//find web element to be dragged
+		WebElement source = driver.findElement(By.xpath("//android.view.View[@resource-id=\"io.appium.android.apis:id/drag_dot_1\"]"));
+
+		//find destination web element
+		WebElement target = driver.findElement(By.xpath("//android.view.View[@resource-id=\"io.appium.android.apis:id/drag_dot_2\"]"));
+		//destination.click();
+
+		//	WebElement source = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_1"));
+		//	WebElement target = driver.findElement(AppiumBy.id("io.appium.android.apis:id/drag_dot_2"));
+		//Point sourceElementCenter = getCenterOfElement(source.getLocation()/*returns x,y axis if the element*/, source.getSize());
+		//Point targetElementCenter = getCenterOfElement(target.getLocation(), target.getSize());
+	
+		Point sourceElementCenter = getCenter(source);
+		Point targetElementCenter = getCenter(target);
+		
+		//PointerInput class to create a sequence of actions 
+		//that move the pointer to the center of the element, 
+		//press down on the element, and then release the element.
+
+		
+		PointerInput finger1 = new PointerInput (PointerInput.Kind.TOUCH,"finger1");
+		
+		//Sequence object, which is a list of actions that will be performed on the device
+
+		Sequence sequence = new Sequence (finger1, 1)
+				//move finger to the starting position
+				.addAction (finger1.createPointerMove (Duration.ZERO, PointerInput.Origin.viewport(), sourceElementCenter))
+				//finger coming down to contact with screen
+				.addAction (finger1.createPointerDown(PointerInput.MouseButton. LEFT.asArg()))
+				
+				.addAction(new Pause(finger1, Duration.ofMillis(588)))
+				
+				//move finger to the end position
+				.addAction(finger1.createPointerMove(Duration.ofMillis(588), PointerInput.Origin.viewport(), targetElementCenter))
+				
+				//move the finger up
+				.addAction (finger1.createPointerUp(PointerInput.MouseButton.LEFT.asArg()));
+		
+		//perform sequence of actions
+		driver.perform(Collections.singletonList(sequence));
+	
+		Thread.sleep(2000);
+		
+		 driver.quit();//CLOSE SESSION
+	}
+
+
+
+
+	//Actions actions = new Actions(driver);
+	//actions.dragAndDrop(source, destination).build().perform();
+
+	//	actions.click(source).dr;
+
+	//actions.perform();
+
+	//	actions.dragAndDrop(From, To).build().perform();
+
+	//	TouchAction action = new TouchAction(driver);
+
+	//	action.longPress(longPressOptions().withElement(element(source))).moveTo(element(destination)).release().perform();
+
+
+//private static Point getCenterOfElement(Point location, Dimension size)
+//{
+//	return new Point(location.getX() + size.getWidth()/2,
+//			location.getY()+ size.getHeight()/2);
+//}
+
+
+private static Point getCenter(WebElement element)
+{
+	//get location of the element
+	Point location = element.getLocation();
+	
+	//get dimension (height & width of the element)
+	Dimension size = element.getSize();
+	
+	//center point
+	Point center = new Point (location.x + size.width/2, location.y + size.height/2);
+	
+	return center;
+	
+}
+
+}
+
+
+
+/*
+
+//destination.click();
+
+		//Actions actions = new Actions(driver);
+		//actions.dragAndDrop(source, destination).build().perform();
+
+		//	actions.click(source).dr;
+
+		//actions.perform();
+
+		//	actions.dragAndDrop(From, To).build().perform();
+
+
+
+		TouchAction action = new TouchAction(driver);
+
+		action.longPress(longPressOptions().withElement(element(source))).moveTo(element(destination)).release().perform();
+
+ */

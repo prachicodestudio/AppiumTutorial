@@ -27,8 +27,8 @@ INDEX VERSION 1.134+C:\Users\ASUS\Desktop\Appium\.metadata\.plugins\org.eclipse.
 3097005211.index
 4055588243.index
 1347296426.index
-297194063.index
 2066861028.index
+297194063.index
 3123579317.index
 4131274652.index
 1586761703.index
@@ -37,7 +37,6 @@ INDEX VERSION 1.134+C:\Users\ASUS\Desktop\Appium\.metadata\.plugins\org.eclipse.
 2914040310.index
 2532641575.index
 2553061339.index
-1207912942.index
 2729465690.index
 355962429.index
 2944795016.index

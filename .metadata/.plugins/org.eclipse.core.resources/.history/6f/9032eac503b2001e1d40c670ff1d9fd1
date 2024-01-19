@@ -1,0 +1,81 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.TouchAction;
+import io.appium.java_client.android.AndroidDriver;
+
+public class dragdrop {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+		// TODO Auto-generated method stub
+				//Gather Desired capabilities
+
+				DesiredCapabilities capabilities = new DesiredCapabilities();
+
+				capabilities.setCapability("deviceName","OnePlus AC2001");
+				capabilities.setCapability("platformname", "Android");     
+				capabilities.setCapability("automationName","uiautomator2");
+				capabilities.setCapability("platformversion", "12");
+		        capabilities.setCapability("app", "C:\\Users\\ASUS\\Desktop\\apkfiles\\ApiDemos-debug.apk");
+
+
+				capabilities.setCapability("appPackage","io.appium.android.apis");
+				capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+			
+				
+				
+				//com.mobeta.android.demodslv/com.mobeta.android.demodslv.Launcher
+				//capabilities.setCapability("appPackage","com.mobeta.android.demodslv");
+				//capabilities.setCapability("appActivity", "com.mobeta.android.demodslv.Launcher");
+				//io.appium.android.apis/io.appium.android.apis.ApiDemos
+
+
+				URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+				AndroidDriver driver = new AndroidDriver(url, capabilities);
+				
+				
+			//	TouchAction().tap(el).perform()
+
+				driver.perform(TouchAction().tap(el));
+				
+				TouchAction touchAction = new TouchAction(driver);
+
+//
+//			    touchAction.longPress(PointOption.point(startx, starty))
+//			               .moveTo(PointOption.point(endx, endy))
+//			               .release()
+//			               .perform();
+						TouchAction actions = new TouchAction(driver);
+							actions.tap(null)
+//				actions.tap((AndroidElement)driver.findElement(AppiumBy.androidUIAutomator("text(\"Views\")")).perform());
+
+				driver.findElement(AppiumBy.androidUIAutomator("text(\"Drag and Drop\")").click();
+
+				WebElement element1 = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_1"));
+
+				WebElement element2 = driver.findElement(By.id("io.appium.android.apis:id/drag_dot_2"));
+
+				actions.longPress(element1).waitAction(3000).perform().release();
+				
+				
+				Thread.sleep(2000);
+				System.out.println("Application Started");
+
+				//click on view button
+				driver.findElement(By.xpath("//android.widget.Button[@resource-id=\"com.android.permissioncontroller:id/continue_button\"]")).click();
+				//click 
+				driver.findElement(By.xpath("//android.widget.TextView[@resource-id=\"com.mobeta.android.demodslv:id/activity_desc\" and @text=\"Use the menu to adjust settings related to item removal and drag initiation. These options are provided by the DragSortController class.\"]")).click();
+
+	}
+
+}
