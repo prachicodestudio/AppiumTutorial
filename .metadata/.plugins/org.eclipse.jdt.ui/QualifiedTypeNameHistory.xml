@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy.ById"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.touch.LongPressOptions"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.touch.offset.ElementOption"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.TouchAction"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.PointerInput.Kind"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy.ByAndroidUIAutomator"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.Dimension"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Pause"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.android.Activity"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.remote.DesiredCapabilities"/>
     <fullyQualifiedTypeName name="java.net.URL"/>
     <fullyQualifiedTypeName name="java.net.URI"/>
     <fullyQualifiedTypeName name="io.appium.java_client.android.AndroidDriver"/>
-    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy.ById"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.By"/>
-    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy"/>
-    <fullyQualifiedTypeName name="io.appium.java_client.touch.LongPressOptions"/>
-    <fullyQualifiedTypeName name="io.appium.java_client.touch.offset.ElementOption"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
-    <fullyQualifiedTypeName name="java.awt.Point"/>
     <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="io.appium.java_client.TouchAction"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.AppiumDriver"/>
+    <fullyQualifiedTypeName name="io.appium.java_client.AppiumBy"/>
+    <fullyQualifiedTypeName name="Demo.LongPress"/>
+    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+    <fullyQualifiedTypeName name="java.awt.Point"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.Point"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.Dimension"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.interactions.PointerInput"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.PointerInput.Kind"/>
     <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Sequence"/>
     <fullyQualifiedTypeName name="java.time.Duration"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Pause"/>
-    <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
 </qualifiedTypeNameHistroy>

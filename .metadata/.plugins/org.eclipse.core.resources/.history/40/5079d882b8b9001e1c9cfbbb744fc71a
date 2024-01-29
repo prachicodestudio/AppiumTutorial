@@ -1,0 +1,60 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.AndroidDriver;
+
+public class FormComponents {
+
+	public static void main(String[] args) throws InterruptedException, MalformedURLException {
+		// TODO Auto-generated method stub
+
+		//Gather Desired capabilities
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+		capabilities.setCapability("deviceName","OnePlus AC2001");
+		capabilities.setCapability("platformname", "Android");     
+		capabilities.setCapability("automationName","uiautomator2");
+		capabilities.setCapability("platformversion", "12");
+		//com.wdiodemoapp/com.wdiodemoapp.MainActivity
+		capabilities.setCapability("appPackage","com.wdiodemoapp");
+		capabilities.setCapability("appActivity", "com.wdiodemoapp.MainActivity");
+
+		//io.appium.android.apis/io.appium.android.apis.ApiDemos
+		URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+		Thread.sleep(2000);
+		System.out.println("Application Started");
+
+		//click on forms
+		driver.findElement(By.xpath("//android.widget.TextView[@text=\"Forms\"]")).click();
+
+		String inputData = "Prachi";
+		//Enter data to input field
+		driver.findElement(By.xpath("//android.widget.EditText[@content-desc=\"text-input\"]")).sendKeys(inputData);
+
+		//verify you have typed data
+		String actualText  = driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"input-text-result\"]")).getText();
+
+		if(actualText.equals(inputData))
+		{
+			System.out.println("Expected and actual input is same. Passed");
+		}
+		else
+			System.out.println("Expected and actual input is not same. failed");
+
+		
+		//switch 
+		driver.findElement(By.xpath("//android.widget.Switch[@content-desc=\"switch\"]")).sendKeys(inputData);
+
+		
+		driver.quit();
+	}
+
+}

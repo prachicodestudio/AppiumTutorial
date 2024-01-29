@@ -8,6 +8,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="find"/>
 			<item value="AppiumBy"/>
 		</list>
 		<list key="replacehistory">

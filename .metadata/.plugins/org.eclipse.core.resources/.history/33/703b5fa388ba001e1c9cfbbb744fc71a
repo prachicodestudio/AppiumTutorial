@@ -1,0 +1,62 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.AppiumBy;
+import io.appium.java_client.android.AndroidDriver;
+
+public class Locators {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+		//Gather desired capabilities
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+
+		capabilities.setCapability("deviceName","OnePlus AC2001");
+		capabilities.setCapability("platformname", "Android");     
+		capabilities.setCapability("automationName","uiautomator2");
+		capabilities.setCapability("platformversion", "12");
+
+		//io.appium.android.apis/io.appium.android.apis.ApiDemos
+		capabilities.setCapability("appPackage","io.appium.android.apis");
+		capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+
+
+		URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+
+		Thread.sleep(2000);
+
+		System.out.println("Application Started");
+
+
+		driver.findElement(By.id("android:id/text1"));
+		driver.findElement(By.xpath("//android.widget.TextView[@content-desc=\"Views\"]"));
+		
+		driver.findElement(By.className("android.widget.TextView"));
+	
+		//driver.findElementByAccessibilityId("Views");
+		driver.findElement(AppiumBy.accessibilityId("Views"));
+		//driver.findElement(AppiumBy.image(base64EncodedImageFile));
+		//driver.findElementByImage(base64EncodedImageFile);
+		driver.findElement(AppiumBy.androidUIAutomator("new UiSelector().text(\"Views\");"));
+		
+		//driver.findElementByAndroidUIAutomator("new UiSelector().text("Views");");
+		//driver.findElementByIosNsPredicate("type == 'XCUIElementBottn' AND name == 'ComputeSumButton'");
+
+		// Find multiple elements
+	//	driver.findElements(By.className("android.widget.CheckBox"));
+
+		driver.quit();
+
+
+	}
+
+}

@@ -1,0 +1,74 @@
+package Demo;
+
+import java.net.MalformedURLException;
+import java.net.URI;
+import java.net.URL;
+
+import org.openqa.selenium.remote.DesiredCapabilities;
+
+import io.appium.java_client.android.Activity;
+import io.appium.java_client.android.AndroidDriver;
+
+public class AppManagement {
+
+	public static void main(String[] args) throws MalformedURLException, InterruptedException {
+		// TODO Auto-generated method stub
+
+		//Gather Desired capabilities
+
+		DesiredCapabilities capabilities = new DesiredCapabilities();
+
+		capabilities.setCapability("deviceName","OnePlus AC2001");
+		capabilities.setCapability("platformname", "Android");     
+		capabilities.setCapability("automationName","uiautomator2");
+		capabilities.setCapability("platformversion", "12");
+
+		//capabilities.setCapability("appPackage","io.appium.android.apis");
+		//capabilities.setCapability("appActivity", "io.appium.android.apis.ApiDemos");
+		//io.appium.android.apis/io.appium.android.apis.ApiDemos
+
+
+		URL url = URI.create("http://127.0.0.1:4723/").toURL();
+
+		AndroidDriver driver = new AndroidDriver(url, capabilities);
+		Thread.sleep(5000);
+
+
+		String packageName = "io.appium.android.apis";
+	
+		
+		// Verify app is installed
+		if(!driver.isAppInstalled(packageName))
+		{
+			//Install app
+			driver.installApp("C:\\Users\\ASUS\\Desktop\\apkfiles\\ApiDemos-debug.apk");
+			System.out.println("Application Installed");
+		}
+		else
+		{
+			System.out.println("Application already installed");
+		}
+
+
+		//	driver.isAppInstalled(packageName); // returns boolean
+
+		//Activate app
+		driver.activateApp(packageName);
+
+		// Get current activity
+		//driver.currentActivity(); // returns String
+
+		// Get current package
+		//driver.getCurrentPackage(); // returns String
+
+		// Terminate app
+		//driver.terminateApp(packageName); // returns bool
+
+
+		// Remove app
+		driver.removeApp(packageName);
+
+		driver.quit();
+	}
+
+}
